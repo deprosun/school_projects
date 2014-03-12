@@ -1,0 +1,6 @@
+*.class
+.metadata/
+A-StarSearch/.cache
+A-StarSearch/.classpath
+A-StarSearch/.project
+A-StarSearch/.settings/

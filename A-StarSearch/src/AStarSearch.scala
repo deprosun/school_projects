@@ -4,31 +4,6 @@ import scala.collection.mutable.HashMap
 object AStarSearch {
 
   def main(args: Array[String]): Unit = {
-    //    var f = ArrayBuffer(5, 4, 2, 8, 6, 7);
-    //    val mh = new MinHeap();
-    //    mh.BuildMinHeap(f);
-    //
-    //    println("Original Array....");
-    //    for (a <- f) {
-    //      print(a + " ");
-    //    }
-    //    println();
-    //    print("---------------------");
-    //
-    //    mh.ExtractMin(f);
-    //    mh.ExtractMin(f);
-    //    mh.ExtractMin(f);
-    //    mh.ExtractMin(f);
-    //    mh.ExtractMin(f);
-    //    mh.ExtractMin(f);
-    //    mh.ExtractMin(f);
-    //
-    //    println("After extraction....");
-    //    for (a <- f) {
-    //      print(a + " ");
-    //    }
-    //    println();
-    //    print("---------------------");
     var hashmap: Map[String, Int] = Map();
     var places = new ArrayBuffer[GraphNode]();
 
