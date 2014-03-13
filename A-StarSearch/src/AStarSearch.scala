@@ -114,7 +114,7 @@ object AStarSearch {
       var found = false;
       while ((found == false) && !(frontier.isEmpty(places))) {
         val p = frontier.ExtractMin(places);
-        System.err.println("Dequeued " + p.getPlace() + " with function " + p.getFunction());
+        System.err.println("Dequeued " + p.getPlace().toUpperCase() + " with estimation " + p.getFunction());
         if (p.getPlace().equalsIgnoreCase(g.getPlace())) {
           println("found..");
           found = true;
@@ -128,7 +128,7 @@ object AStarSearch {
               k.setFunction(math.abs(p.getFunction() - p.getHeuristic) + hashmap(k.getPlace() + p.getPlace()));
             }
             frontier.insert(places, k);
-            println("Enqueued " + k.getPlace() + " with function " + k.getFunction());
+            println("Enqueued " + k.getPlace().toUpperCase() + " with estimation " + k.getFunction());
           }
         }
       }
