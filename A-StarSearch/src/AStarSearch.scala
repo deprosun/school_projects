@@ -112,6 +112,7 @@ object AStarSearch {
       println(k.getPlace().toUpperCase() + " is the start node");
       frontier.insert(places, k);
       var found = false;
+      
       while ((found == false) && !(frontier.isEmpty(places))) {
         val p = frontier.ExtractMin(places);
         System.err.println("Dequeued " + p.getPlace().toUpperCase() + " with estimation " + p.getFunction());
