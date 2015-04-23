@@ -1,10 +1,49 @@
-h1
-{
-	color: green;
-	font-family: Arial;
+.loginOrSignup {
+    text-align: center;
+    color: red;
 }
 
-p
-{
-	color: blue;
+.form {
+  background: #3E6474;
+  padding: 40px;
+  max-width:400px;
+  margin:40px auto;
+  border-radius:$br;
+  box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#scoreboard {
+  background: #3E6474;
+  padding: 10px;
+  max-width:75%;
+  /*margin:20px auto;*/
+  border-radius:$br;
+  box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#scoreboard_table{
+    width : 100%;
+    text-align : left;
+    border: 1%;
+}
+
+#scoreboard_table tr {
+  line-height: 25px;
+}
+
+#scoreboard_table tr input{
+  /*padding: 15px;*/
+  /*background: rgba(255,255,255,0.5);*/
+  /*margin: 0 0 10px 0;*/
+  width : 100%;
+}
+
+#scoreboard_table tr textarea{
+  overflow-y: scroll;
+  heigth : 50px;
+  width : 100%;
+}
+
+.player_name {
+  width: 4%;
 }
