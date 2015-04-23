@@ -14,8 +14,8 @@
 
 #scoreboard {
   background: #3E6474;
-  padding: 10px;
-  max-width:75%;
+  padding: 2px;
+  max-width:100%;
   /*margin:20px auto;*/
   border-radius:$br;
   box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
@@ -25,6 +25,7 @@
     width : 100%;
     text-align : left;
     border: 1%;
+    font-family: times;
 }
 
 #scoreboard_table tr {
@@ -42,6 +43,11 @@
   overflow-y: scroll;
   heigth : 50px;
   width : 100%;
+}
+
+.Balls_4_6{
+  text-align : center;
+  width : 5%;
 }
 
 .player_name {
