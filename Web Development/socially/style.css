@@ -1,0 +1,59 @@
+.loginOrSignup {
+    text-align: center;
+    color: red;
+}
+
+.form {
+  background: #3E6474;
+  padding: 40px;
+  max-width:400px;
+  margin:40px auto;
+  border-radius:$br;
+  box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#scoreboard_batting {
+  /*background: #3E6474;*/
+  /*padding: 2px;*/
+  max-width:100%;
+  /*margin:20px auto;*/
+  /*border-radius:$br;*/
+  /*box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
+}
+
+#scoreboard_table{
+    width : 100%;
+    text-align : left;
+    /*border: 1%;*/
+    font-family: times;
+}
+
+#scoreboard_table tr {
+  line-height: 25px;
+}
+
+#scoreboard_table tr td input{
+  /*padding: 15px;*/
+  /*background: rgba(255,255,255,0.5);*/
+  /*margin: 0 0 10px 0;*/
+  width : 100%;
+}
+
+#scoreboard_table_bowling input{
+    width : 90%;
+}
+
+#scoreboard_table tr{
+  overflow-y: scroll;
+  heigth : 50px;
+  width : 100%;
+}
+
+.Balls_4_6{
+  text-align : center;
+  width : 5%;
+}
+
+.player_name {
+  width: 4%;
+}

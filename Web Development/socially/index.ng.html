@@ -1,0 +1,127 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Scoreboard</title>
+</head>
+<div ng-controller="PartiesListCtrl">
+    <!-- <form>
+      <label>Name</label>
+      <input ng-model="newParty.name">
+      <label>Description</label>
+      <input ng-model="newParty.description">
+      <button ng-click="parties.push(newParty); newParty='';">Add</button>
+      <button ng-click="totalPP()">Another button</button>
+      <br />
+
+    </form> -->
+
+    <div id="scoreboard_batting">
+        <table id="scoreboard_table">
+            <tr id="table_header">
+                <th class="player_name" name="player_name_header" style="text-align: left; width: 150px">Name</th>
+                <th></th>
+                <th></th>
+                <th class="Balls_4_6">Runs</th>
+                <th class="Balls_4_6">Balls</th>
+                <th class="Balls_4_6">4's</th>
+                <th class="Balls_4_6">6's</th>
+                <th class="Balls_4_6">SR</th>
+            </tr>
+            <tr ng-repeat="player in teams[battingTeam].batting">
+                <td><input type="text" name="player_stats" value="{{player.batterName}}" ng-model="editValue" ng-change="player.batterName = editValue" style="width: 100%"/></td>
+                <th></th>
+                <!--<th name="player_name">{{player.batterName}}</th>-->
+                <td><input type="text" name="player_stats" disabled value="{{player.run_sequence}}"/></td>
+                <th class="Balls_4_6">{{player.runs}}</th>
+                <th class="Balls_4_6">{{player.balls}}</th>
+                <th class="Balls_4_6">{{player.fours}}</th>
+                <th class="Balls_4_6">{{player.sixes}}</th>
+                <th class="Balls_4_6">{{player.strikeRate}}</th>
+            </tr>
+        </table>
+    </div>
+
+    <br /><br />
+
+    <div id="scoreboard_bowling">
+        <table id="scoreboard_table_bowling">
+            <tr id="table_header">
+                <th class="player_name" name="player_name_header" style="text-align: left; width: 150px">Name</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th class="Balls_4_6">W</th>
+                <th class="Balls_4_6">M</th>
+                <th class="Balls_4_6">R</th>
+                <th class="Balls_4_6">Econ.</th>
+            </tr>
+            <tr ng-repeat="bowler in teams[bowlingTeam].bowling">
+                <th style = "text-align : left" name="player_name"><input type="text" name="player_stats" value="{{bowler.bowlerName}}" ng-model="editValue" ng-change="bowler.bowlerName = editValue" /></th>
+                <td ng-repeat="over in bowler.oversBowled">
+                    <input type="text" name="{{over.over_history}}" disabled value="{{over.over_history}}"/>
+                </td>
+                <th>{{bowler.wickets}}</th>
+                <th>{{bowler.maidens}}</th>
+                <th>{{bowler.runs}}</th>
+                <th>{{bowler.econRate}}</th>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <!-- <table id = "scoreboard_table">
+    <tr >
+      <td> <input type="text" name = "player_name"/></td>
+      <td> <input type="text" name = "player_stats" value = "{{playerStat}}"/> </td>
+    </tr>
+  </table> -->
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- <button ng-click="updateCurrentPlayerStat(6);">6</button>
+    <button ng-click="updateCurrentPlayerStat(4);">4</button>
+    <button ng-click="updateCurrentPlayerStat(3); switchPlayer();">3</button>
+    <button ng-click="updateCurrentPlayerStat(2);">2</button>
+    <button ng-click="updateCurrentPlayerStat(1); switchPlayer();">1</button>
+    <button ng-click="updateCurrentPlayerStat('.');">DOT</button>
+    <button ng-click="playerStats.push(playerStat); playerStat='';">OUT</button> -->
+
+    <button ng-click="tempCurrentBatsmanRuns = 6;">6</button>
+    <button ng-click="tempCurrentBatsmanRuns = 4;">4</button>
+    <button ng-click="tempCurrentBatsmanRuns = 3; switchPlayer();">3</button>
+    <button ng-click="tempCurrentBatsmanRuns = 2;">2</button>
+    <button ng-click="tempCurrentBatsmanRuns = 1; switchPlayer();">1</button>
+    <button ng-click="tempCurrentBatsmanRuns = '.';">DOT</button>
+    <button ng-click="playerStats.push(playerStat); playerStat='';">OUT</button>
+
+    <br/>
+    <br/>
+    <button ng-click="updateScores();">Update Scores</button>
+    <br/>
+    <br/>
+    <!-- <label>{{teamStats[0].batting}}</label> -->
+
+    <!-- <ul>
+    <li ng-repeat="party in parties">
+      {{party.name}}
+      <p>{{party.description}}</p>
+    </li>
+  </ul>
+  {{pp}} -->
+
+    <!-- <ul>
+    <li ng-repeat="ps in playerStats">
+      <p>{{ps}}</p>
+    </li>
+  </ul> -->
+
+</div>
